@@ -4,26 +4,24 @@ import { Box } from '@chakra-ui/react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const Layout = ({ children }) => {
-  return (
-    <Box>
-      <Head>
-        <title>CoderSingh Eats</title>
-        <meta name="description" content="CoderSingh Eats" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Layout = ({ children }) => (
+  <Box>
+    <Head>
+      <title>CoderSingh Eats</title>
+      <meta name="description" content="CoderSingh Eats" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
 
-      <header>
-        <Navbar />
-      </header>
+    <header>
+      <Navbar />
+    </header>
 
-      <main>{children}</main>
+    <main>{children}</main>
 
-      <footer>
-        <Footer />
-      </footer>
-    </Box>
-  );
-};
+    <footer>
+      <Footer />
+    </footer>
+  </Box>
+);
 
 export default Layout;
