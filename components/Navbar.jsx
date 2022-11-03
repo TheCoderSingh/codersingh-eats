@@ -10,6 +10,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 import { MdEmojiFoodBeverage } from 'react-icons/md';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
@@ -20,13 +21,18 @@ const Navbar = () => {
       <Flex
         justifyContent="space-between"
         alignItems="center"
-        w="90%"
+        w={{ base: '100%', sm: '90%' }}
         mx="auto"
       >
         <Flex alignItems="center">
           <MdEmojiFoodBeverage size={30} />
           <Link href="/">
-            <Text ml={2} fontSize={[14, 18, 22, 25]} textTransform="uppercase">
+            <Text
+              ml={2}
+              fontSize={{ sm: 18, md: 22, lg: 25 }}
+              textTransform="uppercase"
+              display={{ base: 'none', md: 'block' }}
+            >
               CoderSingh Eats
             </Text>
           </Link>
@@ -57,6 +63,10 @@ const Navbar = () => {
             </FormLabel>
             <Switch id="toggle-theme" onChange={toggleColorMode} color="#333" />
           </FormControl>
+        </Box>
+
+        <Box cursor="pointer">
+          <GiHamburgerMenu size={28} />
         </Box>
       </Flex>
     </Box>
