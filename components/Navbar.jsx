@@ -26,13 +26,13 @@ const Navbar = () => {
         <Flex alignItems="center">
           <MdEmojiFoodBeverage size={30} />
           <Link href="/">
-            <Text ml={2} fontSize={25} textTransform="uppercase">
+            <Text ml={2} fontSize={[14, 18, 22, 25]} textTransform="uppercase">
               CoderSingh Eats
             </Text>
           </Link>
         </Flex>
 
-        <Flex gap={4}>
+        <Flex gap={4} display={{ base: 'none', lg: 'flex' }}>
           <Link href="/menu">
             <Text textTransform="uppercase" fontWeight="500">
               Menu
