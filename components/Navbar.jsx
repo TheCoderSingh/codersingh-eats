@@ -1,13 +1,23 @@
 import Link from 'next/link';
 import {
   Box,
+  Button,
+  Divider,
   Flex,
   FormControl,
   FormLabel,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   Switch,
   Text,
   useColorMode,
-  useColorModeValue
+  useColorModeValue,
+  useDisclosure
 } from '@chakra-ui/react';
 import { MdEmojiFoodBeverage } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -15,6 +25,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
   const navbarHeading = useColorModeValue('#eee', '#333');
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box bg={navbarHeading} p={4}>
@@ -65,8 +77,45 @@ const Navbar = () => {
           </FormControl>
         </Box>
 
-        <Box cursor="pointer">
+        <Box cursor="pointer" onClick={onOpen} display={{ lg: 'none' }}>
           <GiHamburgerMenu size={28} />
+
+          <Modal onClose={onClose} isOpen={isOpen}>
+            <ModalOverlay
+              bg="blackAlpha.300"
+              backdropFilter="blur(10px) hue-rotate(90deg)"
+            />
+            <ModalContent height="calc(100vh - 65px)">
+              <ModalHeader textAlign="center" mt={10}>
+                THE CODERSINGH EATS
+              </ModalHeader>
+              <ModalCloseButton />
+              <ModalBody textTransform="uppercase" textAlign="center">
+                <Flex direction="column">
+                  <Link href="/menu">
+                    <Text mt={10} pb={5}>
+                      Menu
+                    </Text>
+                  </Link>
+                  <Divider />
+                  <Link href="/about">
+                    <Text mt={10} pb={5}>
+                      About
+                    </Text>
+                  </Link>
+                  <Divider />
+                  <Link href="/contact">
+                    <Text mt={10} pb={5}>
+                      Contact Us
+                    </Text>
+                  </Link>
+                </Flex>
+              </ModalBody>
+              <ModalFooter>
+                <Button onClick={onClose}>Close</Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
         </Box>
       </Flex>
     </Box>
