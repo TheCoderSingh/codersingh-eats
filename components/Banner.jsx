@@ -4,7 +4,7 @@ import { Box, Button, Flex, Text } from '@chakra-ui/react';
 import Food from '../assets/foodbg.jpg';
 
 const Banner = () => (
-  <Box position="relative" height="calc(100vh - 70px)" overflow="hidden">
+  <Box position="relative" height="100vh" overflow="hidden">
     <Image
       src={Food}
       alt="Food Background"
@@ -22,6 +22,7 @@ const Banner = () => (
       justifyContent="center"
       alignItems="center"
       textTransform="uppercase"
+      pt="70px"
     >
       <Text fontSize={['0.8em', '1.2em', '1.7em', '2em']} color="#fff">
         Welcome to

@@ -29,7 +29,7 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box bg={navbarHeading} p={4}>
+    <Box bg={navbarHeading} p={4} position="fixed" w="full" zIndex={999}>
       <Flex
         justifyContent="space-between"
         alignItems="center"
