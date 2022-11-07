@@ -1,10 +1,21 @@
 import { Box } from '@chakra-ui/react';
-import { Banner, Featured } from '../components';
+import {
+  About,
+  Banner,
+  Contact,
+  Featured,
+  Location,
+  Reviews
+} from '../components';
 
 const Home = () => (
   <Box>
     <Banner />
     <Featured />
+    <Reviews />
+    <About />
+    <Location />
+    <Contact />
   </Box>
 );
 export default Home;

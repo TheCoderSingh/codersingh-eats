@@ -1,5 +1,9 @@
+export { default as About } from './About';
 export { default as Banner } from './Banner';
+export { default as Contact } from './Contact';
 export { default as Featured } from './Featured';
 export { default as Footer } from './Footer';
 export { default as Layout } from './Layout';
+export { default as Location } from './Location';
 export { default as Navbar } from './Navbar';
+export { default as Reviews } from './Reviews';
