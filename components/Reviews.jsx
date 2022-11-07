@@ -12,6 +12,8 @@ const Reviews = () => {
       justifyContent="center"
       w="90%"
       mx="auto"
+      pt={{ base: 20, lg: null }}
+      mb={[20, 20, 20, 20, null]}
     >
       <Heading textAlign="center" textTransform="uppercase">
         See What Our Customers Say
@@ -23,6 +25,7 @@ const Reviews = () => {
         gap={5}
         textAlign="center"
         alignItems="center"
+        flexWrap={{ base: 'wrap', lg: 'nowrap' }}
       >
         <Box gap={3} bg={reviews} p={5}>
           <Box
@@ -109,6 +112,7 @@ const Reviews = () => {
         gap={5}
         textAlign="center"
         alignItems="center"
+        flexWrap={{ base: 'wrap', lg: 'nowrap' }}
       >
         <Box gap={3} bg={reviews} p={5}>
           <Box

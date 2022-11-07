@@ -27,15 +27,16 @@ const Featured = () => {
     >
       <Heading textTransform="uppercase">Featured Faves</Heading>
       <Grid
-        templateRows="repeat(2, 1fr)"
-        templateColumns="repeat(4, 1fr)"
+        templateRows={{ lg: 'repeat(2, 1fr)' }}
+        templateColumns={{ lg: 'repeat(4, 1fr)' }}
         gap={4}
         mt={20}
         w="90%"
         mx="auto"
         alignItems="center"
+        mb={{ base: 20, lg: null }}
       >
-        <GridItem colSpan={2} rowSpan={2}>
+        <GridItem colSpan={{ lg: 2 }} rowSpan={{ lg: 2 }}>
           <Image src={Burger} alt="Burger" />
         </GridItem>
         <GridItem overflow="hidden">

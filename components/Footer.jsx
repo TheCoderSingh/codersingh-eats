@@ -7,9 +7,11 @@ const Footer = () => {
 
   return (
     <Box mt={20} textAlign="center" bg={footer} py={2}>
-      <Text fontSize="0.8em" color={footerText}>
-        Copyright &copy; 2022 | CoderSingh Eats | All Rights Reserved | Designed
-        & Developed by
+      <Text fontSize="0.7em" color={footerText}>
+        Copyright &copy; 2022 | CoderSingh Eats | All Rights Reserved
+      </Text>
+      <Text fontSize="0.7em" color={footerText}>
+        Designed & Developed by
         <Link href="https://thecodersingh.com/" target="_blank">
           {' '}
           TheCoderSingh{' '}
