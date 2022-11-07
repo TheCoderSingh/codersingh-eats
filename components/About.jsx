@@ -21,7 +21,7 @@ const About = () => (
     <GridItem textAlign="center" alignSelf="center">
       <Box h="100%">
         <Text fontSize="1.2em">
-          Excellent Opportunities | Competitive Pay | Amazing Benefits
+          Exciting Opportunities | Competitive Pay | Amazing Benefits
         </Text>
         <Button textTransform="uppercase" borderRadius="none" w="80%" mt={5}>
           Join Our Team
