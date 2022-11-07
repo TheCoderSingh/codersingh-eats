@@ -24,7 +24,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
-  const navbarHeading = useColorModeValue('#eee', '#333');
+  const navbarHeading = useColorModeValue('#eee', '#1a202c');
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -73,7 +73,11 @@ const Navbar = () => {
             <FormLabel htmlFor="toggle-theme" mb="0">
               Theme
             </FormLabel>
-            <Switch id="toggle-theme" onChange={toggleColorMode} color="#333" />
+            <Switch
+              id="toggle-theme"
+              onChange={toggleColorMode}
+              color="#1a202c"
+            />
           </FormControl>
         </Box>
 

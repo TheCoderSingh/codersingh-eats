@@ -14,7 +14,7 @@ import Pizza from '../assets/pizza.jpg';
 import Breakfast from '../assets/breakfast.jpg';
 
 const Featured = () => {
-  const featured = useColorModeValue('#eee', '#333');
+  const featured = useColorModeValue('#eee', '#1a202c');
 
   return (
     <Flex
